@@ -1,4 +1,5 @@
 // @flow
+import { inBrowser } from 'chimee-helper-utils';
 import {isString} from 'toxic-predicate-functions';
 function formatter (tag: string, msg?: string): string {
   if(!isString(tag)) throw new TypeError(`Log's method only acccept string as argument, but not ${tag} in ${typeof tag}`);
@@ -105,4 +106,8 @@ class Log {
   }
 }
 
-export default Log;
+const window = inBrowser ? window : {};
+if (!window._chimee_log) {
+  window._chimee_log = Log;
+}
+export default window._chimee_log;
