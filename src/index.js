@@ -50,7 +50,7 @@ class Log {
   static ENABLE_VERBOSE = true;
   /**
    * equal to console.error, output `[${tag}] > {$msg}`
-   * @param {string} tag optional, the header of log 
+   * @param {string} tag optional, the header of log
    * @param {string} msg the message
    */
   static error (tag: string, msg?: string) {
@@ -62,7 +62,7 @@ class Log {
   }
   /**
    * equal to console.info, output `[${tag}] > {$msg}`
-   * @param {string} tag optional, the header of log 
+   * @param {string} tag optional, the header of log
    * @param {string} msg the message
    */
   static info (tag: string, msg?: string) {
@@ -73,7 +73,7 @@ class Log {
   }
   /**
    * equal to console.warn, output `[${tag}] > {$msg}`
-   * @param {string} tag optional, the header of log 
+   * @param {string} tag optional, the header of log
    * @param {string} msg the message
    */
   static warn (tag: string, msg?: string) {
@@ -84,7 +84,7 @@ class Log {
   }
   /**
    * equal to console.debug, output `[${tag}] > {$msg}`
-   * @param {string} tag optional, the header of log 
+   * @param {string} tag optional, the header of log
    * @param {string} msg the message
    */
   static debug (tag: string, msg?: string) {
@@ -95,7 +95,7 @@ class Log {
   }
   /**
    * equal to console.verbose, output `[${tag}] > {$msg}`
-   * @param {string} tag optional, the header of log 
+   * @param {string} tag optional, the header of log
    * @param {string} msg the message
    */
   static verbose (tag: string, msg?: string) {
@@ -106,8 +106,8 @@ class Log {
   }
 }
 
-const window = inBrowser ? window : {};
-if (!window._chimee_log) {
+if (inBrowser && !window._chimee_log) {
   window._chimee_log = Log;
 }
-export default window._chimee_log;
+
+export default (inBrowser ? window._chimee_log : Log);
