@@ -62,7 +62,7 @@
     "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-uglify": "^6.0.0",
     "toxic-utils": "^0.3.0",
-    "ts-jest": "^23.10.5",
+    "ts-jest": "^24.0.0",
     "tslint": "^5.11.0",
     "typescript": "^3.2.2"
   },
