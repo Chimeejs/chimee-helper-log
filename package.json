@@ -59,7 +59,7 @@
     "rollup": "^1.0.0",
     "rollup-plugin-babel": "^4.1.0",
     "rollup-plugin-commonjs": "^9.2.0",
-    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.0.0",
     "rollup-plugin-uglify": "^6.0.0",
     "toxic-utils": "^0.3.0",
     "ts-jest": "^23.10.5",
